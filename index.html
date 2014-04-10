@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Welcome to MindsMesh</title>
+		<link type="text/css" rel="stylesheet" href="style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=0.61, user-scalable=0"/>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="images/mmfavicon.ico">
+	</head>
+	<body>
+	
+		<!-- HEADER INCLUDE -->
+		<header class="teehee">
+			<ul class="headLogin">
+				<li>
+					<a class="login" href="#">Login</a>
+				</li><!-- END OF HEAD LOGIN UL LI -->
+				<!--
+<li>
+					<a class="CTA2" href="#">Sign Up</a>
+				</li>
+--><!-- END OF HEAD LOGIN UL LI -->
+			</ul><!-- END OF HEAD LOGIN UL -->
+			<a class="menuButton" href="#">&#9776;</a><!-- END OF MENU BUTTON -->
+			<ul class="headMenu">
+				<li>
+					<a href="#">Product</a>
+				</li><!-- END OF HEAD MENU LI -->
+				<li>
+					<a href="#">About</a>
+				</li><!-- END OF HEAD MENU LI -->
+				<li>
+					<a href="http://blog.mindsmesh.com/" target="_blank">Blog</a>
+				</li><!-- END OF HEAD MENU LI -->
+				<li>
+					<a href="#">Contact</a>
+				</li><!-- END OF HEAD MENU LI -->
+			</ul><!-- END OF HEAD MENU -->
+			<a class="headLogo" href="/">
+				<span class="minds">Minds</span>
+				<span class="mesh">Mesh</span>
+			</a><!-- END OF HEAD LOGO -->
+		</header>
+		<!-- END HEADER INCLUDE -->
+		
+		<div class="homeTop teehee">
+			<div class="gradient"></div>
+			<div class="wrap">
+				<h1>Welcome to MindsMesh</h1>
+				<div class="topText">MindsMesh is a private communication platform for educational institutions that focuses on classroom collaboration and mobile technology.</div><!-- END OF TOP TEXT -->
+				<a class="CTA1" href="#">Sign Up</a>
+			</div><!-- END OF WRAP -->
+			<div class="storeBar yep">
+				<ul class="stores">
+					<li>
+						<a class="gp" href="https://play.google.com/store/apps/details?id=com.mindsmesh.mob" target="_blank"></a>
+					</li><!-- END OF STORES LI -->
+					<li>
+						<a class="as" href="https://itunes.apple.com/us/app/mindsmesh/id595862148?mt=8" target="_blank"></a>
+					</li><!-- END OF STORES LI -->
+				</ul><!-- END OF STORES UL -->
+			</div><!-- END OF STORE BAR -->
+		</div><!-- END OF HOME TOP -->
+		
+		<!-- FOOTER INCLUDE -->
+		<footer class="teehee">
+			<ul class="footNav yep">
+				<li>
+					<a href="#">Privacy</a>
+				</li><!-- END OF FOOTER NAV LI -->
+				<li>
+					<a href="#">Terms</a>
+				</li><!-- END OF FOOTER NAV LI -->
+				<li>
+					<a href="#">Support</a>
+				</li><!-- END OF FOOTER NAV LI -->
+			</ul><!-- END OF FOOTER NAV -->
+			<div class="footCopy yep">Copyright &copy; 2014 MindsMesh. All Rights Reserved.</div>
+		</footer>
+		<!-- END FOOTER INCLUDE -->
+		
+		<!-- LOGIN MODAL INCLUDE -->
+		<div class="modalBox hidden">
+			<a class="x" href="#"></a>
+			<span class="modalTitle yep">Login to MindsMesh</span>
+			<form id="form1" class="yep">
+				<span class="email yep">E-Mail Address</span>
+				<input class="input-email yep" name="email" type="email" placeholder="student@someschool.edu">
+				<span class="password yep">Password</span>
+				<input class="input-password yep" name="password" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+				<div class="rememberBox yep">
+					<input id="input-remember" type="checkbox" name="remember">
+					<label for="input-remember">Remember Me</label>
+				</div><!-- END OF REMEMBER BOX -->
+				<input class="submit yep" type="submit" value="Login">
+				<a class="dontKnow yep" href="#">Don't know your password?</a>
+			</form><!-- END OF FORM 1 -->
+			<div class="accountBox yep">
+				<a class="fbLogin yep" href="#">Facebook Login</a>
+				<a class="createNew yep" href="#">Create New Account</a>
+			</div><!-- END OF ACCOUNT BOX -->
+		</div><!-- END OF MODAL BOX -->
+		<div id="main-curtain" class="hidden"></div>
+		<!-- END LOGIN MODAL INCLUDE -->
+		
+		<script>
+			
+			$(document).ready(function() {
+			
+				$('html').click(function() {
+					$('ul.headMenu').slideUp('fast');
+				});
+				
+				$('.menuButton').click(function(e) {
+					e.stopPropagation();
+					$('ul.headMenu').slideToggle('fast');
+				});
+				
+				$('ul.headMenu').click(function(e) {
+					e.stopPropagation();
+				});
+				
+				$('.login').click(function(e) {
+					$('#main-curtain').removeClass('hidden');
+					$('.modalBox').removeClass('hidden');
+					$('a.x').show();
+					$('.login').data('active', true);
+					e.stopPropagation();
+				});
+				
+				$('.modalBox').click(function(e) {
+					e.stopPropagation();
+				});
+				
+				$('html, a.x').click(function() {
+					if($('.login').data('active') === true) {
+						$('.login').data('active', false);
+						$('a.x').hide();
+						$('.modalBox').addClass('hidden').delay(100);
+						$('#main-curtain').addClass('hidden').delay(100);
+					}
+				});
+				
+			});
+			
+		</script>
+		
+	</body>
+</html>

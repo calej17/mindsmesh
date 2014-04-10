@@ -1,0 +1,612 @@
+/* ----------------------------------------------------------------------------------------
+
+
+
+/* ========= 
+
+
+1.0 	UNIVERSAL RESETS / GENERIC / OPTIONAL CLASSES
+2.0 	GLOBAL STRUCTURE
+3.0 	HEADINGS / BRANDING
+4.0 	FORMS
+5.0 	MISC ELEMENTS
+6.0 	PAGE SPECIFIC
+
+X	 	WEBFONTS
+Y		RESPONSIVE LAYOUT
+
+
+Color Guide:
+
+
+========= */
+
+
+
+
+
+/* 1.0 UNIVERSAL RESETS ------------------------------------------------------------------ */
+
+*, html, body, ul, li, img, a
+					  { margin:0;padding:0;border: 0;outline:none;list-style-image:none;list-style-position:outside;list-style-type:none;line-height:1;font-weight:lighter;}
+sup					  { vertical-align:0;position:relative;bottom: 1ex; }
+.clear, br.clear 	  { height: 0 !important; display: block; clear:both; }					  
+.hidden 			  { visibility: hidden !important; display: none; height: 0; width: 0; text-indent: -999999em; }
+.smallcaps			  { font-variant:small-caps; }
+.underline			  { border-bottom:1px solid; }
+.bold, strong		  { font-weight:bold; }
+.italic, em			  { font-style:italic; }
+.yep				  { display: inline-block; }
+.teehee				  { display: table; }
+.yep, .teehee		  { position: relative; width: 100%; }	
+hr 					  { background-color: #e7e7e7;border: 0;clear: both;height: 1px;margin-bottom: 18px; }
+/* remember to define focus styles! ›››› onfocus="this.value=''; this.onfocus=null;" */
+*:focus 			  { outline: 0; }
+						  
+html, body			  { height: 100%; }	
+					
+/*
+::selection 		  { background:; }
+::-moz-selection 	  { background:; }
+*/
+
+/*	General CSS3 Animation
+						  -webkit-transition: all 1s ease-in-out;
+						  -moz-transition: all 1s ease-in-out;
+						  -o-transition: all 1s ease-in-out;
+*/
+
+
+a, a:link, a:visited, a:active, a:active
+					  { text-decoration:none; 
+						-webkit-transition: all 0.3s ease-in-out;
+					    -moz-transition: all 0.3s ease-in-out;
+					    -o-transition: all 0.3s ease-in-out; } 
+
+a, a:link, a:visited  { color:#444; }
+							  
+a:hover, a:active, .headLogin li a:hover, .footNav li a:hover, ul.headMenu li a:hover	  
+					  { color:#059BBC; }
+
+/*
+2.0 GLOBAL STRUCTURE
+------------------------------------------------------------------------------------------
+*/
+
+body				  { background: #F6F6F6;
+					    color: #000;
+					    font-family: 'L-L';
+						font-size: 16px; }
+
+p					  { margin: 0 0 20px;
+						line-height: 170%; }	
+						  
+.wrap				  { margin: 0 auto;
+						max-width: 1180px;
+					    position: relative;
+					    width: 90%; }
+						  
+
+/*
+2.1 HEAD STRUCTURE
+------------------------------------------------------------------
+*/
+
+header {
+	background-color: #FFFFFF;
+}
+
+.menuButton {
+	display: inline-block;
+    float: left;
+    font-size: 35px;
+    font-weight: bold;
+    opacity: 0.15;
+    padding: 26px 40px 31px;
+    position: relative;
+}
+
+.menuButton:hover {
+	color: #000000;
+    opacity: 0.55;
+}
+
+ul.headMenu {
+	background-color: #FFFFFF;
+    display: none;
+    left: 0;
+    padding: 20px 0;
+    position: absolute;
+    top: 92px;
+    z-index: 1;
+}
+
+ul.headMenu li {
+	
+}
+
+ul.headMenu li a {
+	color: #666A78;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 40px;
+    position: relative;
+    width: 189px;
+}
+
+.headLogo {
+	background-image: url("images/mmlogo.png");
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: 39px 39px;
+    display: block;
+    height: 27px;
+    margin: 0 auto;
+    padding: 32px 20px 33px 68px;
+    position: relative;
+    width: 137px;
+}
+
+.minds, .mesh {
+	display: inline-block;
+	float: left;
+	font-size: 26px;
+	position: relative;
+}
+
+.minds {
+	color: #6E7B76;
+    font-family: 'L-B';
+}
+
+.mesh {
+	color: #939A97;
+    font-family: 'L-R';
+}
+
+.headLogin {
+	display: inline-block;
+    float: right;
+    padding: 0 20px 0 0;
+    position: relative;
+}
+
+.headLogin li {
+	display: inline-block;
+    float: left;
+    position: relative;
+}
+
+.headLogin li a {
+	color: #666A78;
+    display: inline-block;
+    padding: 38px 20px;
+}
+
+.headLogin li a:hover {
+	
+}
+
+.headLogin li a.CTA2 {
+	border: 1px solid;
+    color: #059BBC;
+    font-size: 20px;
+    margin: 15px 20px;
+    padding: 19px 48px 21px;
+}
+
+.headLogin li a.CTA2:hover {
+	background-color: #059BBC;
+    color: #FFFFFF;
+}
+
+/*
+2.2 FOOTER STRUCTURE
+------------------------------------------------------------------
+*/
+
+footer {
+	text-align: center;
+}
+
+.footNav {
+	padding: 32px 0 0 0;
+}
+
+.footNav li {
+	display: inline-block;
+	position: relative;
+}
+
+.footNav li a {
+	color: #666A78;
+    display: inline-block;
+    padding: 40px 20px;
+}
+
+.footNav li a:hover {
+	
+}
+
+.footCopy {
+	color: #AEAEAE;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    padding: 22px 0 105px;
+}
+
+/*
+3.0 HEADINGS / BRANDING
+------------------------------------------------------------------
+*/
+
+h1,h2,h3,h4,h5,h6	  {  }
+
+h1 					  { color: #EFF3FF;
+						font-size: 82px; }
+h2 					  {  }
+h3 					  {  }
+h4 					  {  }
+h5 					  {  }
+
+
+
+
+
+/*
+4.0 FORMS
+------------------------------------------------------------------
+*/
+
+#form1 {
+	background-color: #D9D9D9;
+    float: left;
+    padding: 36px 39px 38px 38px; /* 5% */
+    width: 266px; /* 36.5% */
+}
+
+#form1 .email, #form1 .password {
+	font-size: 18px;
+    margin: 0 0 10px;
+}
+
+#form1 .input-email, #form1 .input-password {
+	color: #1B1C21;
+    font-family: 'L-L';
+    font-size: 18px;
+    line-height: 170%;
+    margin: 0 0 21px;
+    padding: 20px 5%;
+    width: 90%;
+}
+
+#form1 .rememberBox {
+	margin: 5px 0 24px;
+}
+
+#form1 #input-remember {
+	display: none;
+}
+
+#form1 label {
+	display: inline-block;
+    font-size: 14px;
+    padding: 4px 0 5px 34px;
+}
+
+#form1 label:before {
+	background-color: #FFFFFF;
+    content: "";
+    display: inline-block;
+    font-size: 22px;
+    height: 23px;
+    left: 0;
+    margin: 0 12px 0 0;
+    position: absolute;
+    top: 0;
+    width: 23px;
+}
+
+#form1 #input-remember:checked + label:before {
+	color: #059BBC;
+	content: "\2713";
+	text-align: center;
+}
+
+#form1 .submit {
+	background-color: #059BBC;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'L-L';
+    font-size: 26px;
+    margin: 0 0 20px;
+    padding: 33px 0 34px;
+}
+
+#form1 .dontKnow {
+	color: #059BBC;
+    font-family: 'L-R';
+    font-size: 14px;
+}
+
+/*
+5.0 MISC
+------------------------------------------------------------------
+*/
+
+blockquote 			  { quotes: none; }
+
+blockquote:before, blockquote:after 
+					  { content: ''; 
+					    content: none; }
+					    
+/* LOGIN MODAL */
+
+.modalBox {
+	display: inline-block;
+    left: 50%;
+    margin: 0 0 0 -370px;
+    position: absolute;
+    top: 100px;
+    width: 740px;
+    z-index: 5;
+}
+
+.modalBox a.x {
+	background-image: url("images/x.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 18px 19px;
+    display: inline-block;
+    height: 19px;
+    left: -36px;
+    position: absolute;
+    top: 4px;
+    width: 18px;
+}
+
+.modalTitle {
+	color: #FFFFFF;
+    font-size: 26px;
+    margin: 0 0 18px;
+}
+
+.accountBox {
+	background-color: #1B1C21;
+    float: left;
+    padding: 129px 36px; /* 129px 5% */
+    text-align: center;
+    width: 324px; /* 43.5% */
+}
+
+.accountBox a {
+	color: #FFFFFF;
+	font-size: 26px;
+}
+
+a.fbLogin {
+	background-color: #3B5998;
+    background-image: url("images/f.png");
+    background-position: 39px center;
+    background-repeat: no-repeat;
+    background-size: 13px 28px;
+    height: 28px;
+    margin: 0 0 24px;
+    padding: 36px 0 37px;
+}
+
+a.createNew {
+	background-color: #0CAF73;
+    padding: 37px 0 38px;
+}
+
+#main-curtain {
+	background-color: rgba(27, 28, 33, 0.98);
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4; 
+}
+
+
+/*
+6.0 PAGE SPECIFIC
+------------------------------------------------------------------
+*/
+
+.homeTop {
+	background-image: url("images/womanbg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0 270px;
+    text-align: center;
+}
+
+.gradient {
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	right bottom,
+	color-stop(0, #404A75),
+	color-stop(1, #5D9682)
+);
+	background-image: -o-linear-gradient(right bottom, #404A75 0%, #5D9682 100%);
+	background-image: -moz-linear-gradient(right bottom, #404A75 0%, #5D9682 100%);
+	background-image: -webkit-linear-gradient(right bottom, #404A75 0%, #5D9682 100%);
+	background-image: -ms-linear-gradient(right bottom, #404A75 0%, #5D9682 100%);
+	background-image: linear-gradient(to right bottom, #404A75 0%, #5D9682 100%);
+	
+	display: block;
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.homeTop h1 {
+	margin: 0 0 47px;
+}
+
+.topText {
+	color: #C9DAF0;
+    display: inline-block;
+    font-size: 32px;
+    line-height: 42px;
+    margin: 0 0 55px;
+    padding: 0 20%;
+    position: relative;
+    width: 60%;
+}
+
+a.CTA1 {
+	background-color: #059BBC;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 34px;
+    padding: 30px 80px 38px;
+    position: relative;
+}
+
+a.CTA1:hover {
+	
+}
+
+.storeBar {
+	background-color: rgba(27, 28, 33, 0.7);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+ul.stores {
+	display: inline-block;
+    position: relative;
+}
+
+ul.stores li {
+	display: inline-block;
+    position: relative;
+}
+
+ul.stores li a {
+	background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    height: 36px;
+    padding: 40px;
+    position: relative;
+    width: 175px;
+}
+
+ul.stores li a:hover {
+	background-color: rgba(27, 28, 33, 0.3);
+}
+
+.gp {
+	background-image: url("images/gplogo.png");
+    background-size: 170px 38px;
+}
+
+.as {
+	background-image: url("images/aslogo.png");
+    background-size: 134px 36px;
+}
+
+/* 
+X.0 WEBFONTS -----------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'L-B';
+    src: url('inc/fonts/lato-bol.eot');
+    src: url('inc/fonts/lato-bol.eot?#iefix') format('embedded-opentype'),
+         url('inc/fonts/lato-bol.woff') format('woff'),
+         url('inc/fonts/lato-bol.ttf') format('truetype'),
+         url('inc/fonts/lato-bol.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'L-L';
+    src: url('inc/fonts/lato-lig.eot');
+    src: url('inc/fonts/lato-lig.eot?#iefix') format('embedded-opentype'),
+         url('inc/fonts/lato-lig.woff') format('woff'),
+         url('inc/fonts/lato-lig.ttf') format('truetype'),
+         url('inc/fonts/lato-lig.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'L-R';
+    src: url('inc/fonts/lato-reg.eot');
+    src: url('inc/fonts/lato-reg.eot?#iefix') format('embedded-opentype'),
+         url('inc/fonts/lato-reg.woff') format('woff'),
+         url('inc/fonts/lato-reg.ttf') format('truetype'),
+         url('inc/fonts/lato-reg.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+Y.0 RESPONSIVE LAYOUT STYLES
+------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 960px) {
+	.homeTop .wrap {
+		width: 90%;
+	}
+	
+	.topText {
+		padding: 0 5%;
+		width: 90%;
+	}
+	
+	.modalBox {
+		margin: 0 0 0 -171px;
+		width: 370px;
+	}
+	
+	.accountBox {
+		padding: 24px 0;
+		width: 343px;
+	}
+	
+	input {
+		-webkit-appearance: none;
+		border-radius: 0;
+	}
+}
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	
+}
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 960px) {
+
+}
+
+
+
